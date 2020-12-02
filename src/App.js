@@ -40,6 +40,15 @@ function App() {
     );
   }
 
+  if (tours.length == 0) {
+    return (
+      <main>
+        <h1>No more tours</h1>
+        <button onClick={fetchTours}>Display tours</button>
+      </main>
+    );
+  }
+
   return (
     <main>
       <Tours tours={tours} removeTour={removeTour} />
